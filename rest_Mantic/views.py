@@ -19,6 +19,10 @@ from rest_framework.permissions import IsAuthenticated
 def index(request):
     juegos = juego.objects.all()
     return render(request, 'core/index.html', {'juegos':juegos})
+
+def Productos(request):
+    return render(request, "core/Productos.html")
+
 @csrf_exempt
 @api_view
 #@permission_classes((IsAuthenticated,))
