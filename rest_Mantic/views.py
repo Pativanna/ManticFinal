@@ -21,7 +21,31 @@ def index(request):
     return render(request, 'core/index.html', {'juegos':juegos})
 
 def Productos(request):
-    return render(request, "core/Productos.html")
+    juegos = juego.objects.all()
+    consolas = consola.objects.all()
+    figuras = figura.objects.all()
+    return render(request, "core/Productos.html", {'juegos':juegos, 'consolas':consolas, 'figuras':figuras})
+
+def ProductosConsola(request):
+    consolas = consola.objects.all()
+    return render(request, "core/ProductosConsola.html", {'consolas':consolas})
+
+def ProductosJuego(request):
+    juegos = juego.objects.all()
+    return render(request, "core/ProductosJuego.html", {'juegos':juegos})
+
+def ProductosFigura(request):
+    figuras = figura.objects.all()
+    return render(request, "core/ProductosFigura.html", {'figuras':figuras})
+
+def Cuenta(request):
+    return render(request, "core/cuenta.html")
+
+def CrearCuenta(request):
+    return render(request, "core/crearCuenta.html")
+
+def Carrito(request):
+    return render(request, "core/Carrito.html")
 
 @csrf_exempt
 @api_view

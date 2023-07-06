@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <main class="container">
-    <h1>Productos:</h1>
+    <h1>Juegos Disponibles:</h1>
     <br>
 
     <div class="container">
@@ -15,22 +15,7 @@
                 </div>
             </div>
             {% endfor %}
-            {% for con in consolas %}
-            <div class="cardcolor" style="width: 18rem;">
-                <img src="{{ con.imagen.url }}" style="height: 280px;" class="card-img-top" alt="..."></a>
-                <div class="card-body">
-                    <h5 class="card-title">{{con.nomConsola}}</h5>
-                </div>
-            </div>
-            {% endfor %}
-            {% for fig in figuras %}
-            <div class="cardcolor" style="width: 18rem;">
-                <img src="{{ fig.imagen.url }}" style="height: 280px;" class="card-img-top" alt="..."></a>
-                <div class="card-body">
-                    <h5 class="card-title">{{fig.nomFigura}}</h5>
-                </div>
-            </div>
-            {% endfor %}
+            
             <div class="cardcolor" style="width: 18rem;">
                 <a href="zeldabt.html"><img src="{% static 'IMG/zeldabw.jpg' %}" style="height: 280px;"
                         class="card-img-top" alt="..."></a>
@@ -38,13 +23,7 @@
                     <h5 class="card-title">Legend of zelda BW</h5>
                 </div>
             </div>
-            <div class="cardcolor" style="width: 18rem;">
-                <a href="ps5ficha.html"><img src="{% static 'IMG/ps5ven.jpg' %}" style="height: 280px;"
-                        class="card-img-top" alt="..."></a>
-                <div class="card-body">
-                    <h5 class="card-title">Play Station 5</h5>
-                </div>
-            </div>
+            
             <div class="cardcolor" style="width: 18rem;">
                 <a href="godwa.html"><img src="{% static 'IMG/god of war.jpg' %}" style="height: 280px;"
                         class="card-img-top" alt="..."></a>

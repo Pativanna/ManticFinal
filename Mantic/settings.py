@@ -143,4 +143,4 @@ STATICFILES_DIRS= (os.path.join(BASE_DIR, 'rest_Mantic/static'),)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = BASE_DIR / "files"
-MEDIA_URL = "/media-files/rest_Mantic/static"
+MEDIA_URL = "/files/rest_Mantic/static/"

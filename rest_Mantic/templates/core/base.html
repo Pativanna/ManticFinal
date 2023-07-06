@@ -9,7 +9,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'CSS/Main.css' %}">
     <script src='main.js'></script>
 </head>
 
@@ -27,7 +27,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'Productos' %}">Productos</a>
@@ -38,9 +38,9 @@
                                     Categoria
                                 </a>
                                 <ul class="dropdown-menu dropdowncolor">
-                                    <li><a class="dropdown-item" style="color: black;" href="#">Juegos</a></li>
-                                    <li><a class="dropdown-item" style="color: black;" href="#">Figuras</a></li>
-                                    <li><a class="dropdown-item" style="color: black;" href="#">Consolas</a></li>
+                                    <li><a class="dropdown-item" style="color: black;" href="{% url 'ProductosJuego' %}">Juegos</a></li>
+                                    <li><a class="dropdown-item" style="color: black;" href="{% url 'ProductosFigura' %}">Figuras</a></li>
+                                    <li><a class="dropdown-item" style="color: black;" href="{% url 'ProductosConsola' %}">Consolas</a></li>
                                 </ul>
                     </div>
                     <form class="d-flex" role="search">
@@ -48,8 +48,8 @@
                         <button class="btn btn-outline-success" style="font-weight: bold; color: black;"
                             type="submit">Search</button>
                     </form>
-                    <a href="Carrito.html"><img src="{% static 'IMG/carrito.png' %}" alt="" height="30" width="30"></a>
-                    <a href="cuenta.html"><img src="{% static 'IMG/usuario.png' %}" alt="" height="30" width="30"></a>
+                    <a href="{% url 'Carrito' %}"><img src="{% static 'IMG/carrito.png' %}" alt="" height="30" width="30"></a>
+                    <a href="{% url 'Cuenta' %}"><img src="{% static 'IMG/usuario.png' %}" alt="" height="30" width="30"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
