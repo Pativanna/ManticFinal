@@ -47,6 +47,9 @@ def CrearCuenta(request):
 def Carrito(request):
     return render(request, "core/Carrito.html")
 
+def godwa(request):
+    return render(request, "core/godwa.html")
+
 @csrf_exempt
 @api_view
 #@permission_classes((IsAuthenticated,))
